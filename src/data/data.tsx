@@ -2,8 +2,6 @@ import {
   AcademicCapIcon,
   ArrowDownTrayIcon,
   BuildingOffice2Icon,
-  CalendarIcon,
-  FlagIcon,
   MapIcon,
   SparklesIcon,
 } from '@heroicons/react/24/outline';
@@ -15,6 +13,8 @@ import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
 import TwitterIcon from '../components/Icon/TwitterIcon';
 import heroImage from '../images/header-background.webp';
 import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
+import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
+import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
 import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
 import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
@@ -23,8 +23,6 @@ import porfolioImage6 from '../images/portfolio/portfolio-6.jpg';
 import porfolioImage7 from '../images/portfolio/portfolio-7.jpg';
 import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
 import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
-import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
-import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
 import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';
 import {
@@ -44,8 +42,8 @@ import {
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: 'React Resume Template',
-  description: "Example site built with Tim Baker's react resume template",
+  title: 'Mike Irlbeck',
+  description: "Mike Irlbeck's personal website, showcasing his work and interests.",
 };
 
 /**
@@ -69,18 +67,23 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Tim Baker.`,
+  name: `I'm Mike Irlbeck.`,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">Instant Domains</strong> helping build a modern, mobile-first, domain
-        registrar and site builder.
+        I'm a Colorado based <strong className="text-stone-100">Software Engineer</strong>, currently working at{' '}
+        <strong className="text-stone-100">Vectis Automation</strong> to help build a robotic welding user interface and
+        programming tools to better enable the collaboration of man and machine.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">Muay Thai</strong>,
-        plucking my <strong className="text-stone-100">banjo</strong>, or exploring beautiful{' '}
-        <strong className="text-stone-100">Vancouver Island</strong>.
+        My deep passion for learning has led me to pursue a{' '}
+        <strong className="text-stone-100">Masters in Computer Science</strong> through{' '}
+        <strong className="text-stone-100">Georgia Tech</strong>. My current focus centers on computing systems.
+      </p>
+      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
+        In my free time time, you can catch me <strong className="text-stone-100">mountain biking</strong>,{' '}
+        <strong className="text-stone-100">reading</strong>, or exploring the magnificent{' '}
+        <strong className="text-stone-100">Rocky Mountains</strong>.
       </p>
     </>
   ),
@@ -108,12 +111,10 @@ export const aboutData: About = {
   to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
   in.`,
   aboutItems: [
-    {label: 'Location', text: 'Victoria, BC', Icon: MapIcon},
-    {label: 'Age', text: '29', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Canadian / Irish', Icon: FlagIcon},
-    {label: 'Interests', text: 'Motorcycles, Muay Thai, Banjos', Icon: SparklesIcon},
-    {label: 'Study', text: 'University of Victoria', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
+    {label: 'Location', text: 'Loveland, CO', Icon: MapIcon},
+    {label: 'Interests', text: 'Mountain Biking, Reading, Hiking', Icon: SparklesIcon},
+    {label: 'Study', text: 'Georgia Institute of Technology', Icon: AcademicCapIcon},
+    {label: 'Employment', text: 'Vectis Automation LLC', Icon: BuildingOffice2Icon},
   ],
 };
 
