@@ -7,22 +7,9 @@ import {
 } from '@heroicons/react/24/outline';
 
 import GithubIcon from '../components/Icon/GithubIcon';
-import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
-import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
-import TwitterIcon from '../components/Icon/TwitterIcon';
 import heroImage from '../images/header-background.webp';
 import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
-import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
-import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
-import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
-import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
-import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
-import porfolioImage5 from '../images/portfolio/portfolio-5.jpg';
-import porfolioImage6 from '../images/portfolio/portfolio-6.jpg';
-import porfolioImage7 from '../images/portfolio/portfolio-7.jpg';
-import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
-import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
 import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';
 import {
@@ -107,9 +94,7 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
-  to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
-  in.`,
+  description: `My passion resides in building useful apps where I have the opportunity to develop both the front end interface as well as the backend data management and algorithm design. Learning the complete picture of the computer system has also been fascinating.`,
   aboutItems: [
     {label: 'Location', text: 'Loveland, CO', Icon: MapIcon},
     {label: 'Interests', text: 'Mountain Biking, Reading, Hiking', Icon: SparklesIcon},
@@ -123,36 +108,19 @@ export const aboutData: About = {
  */
 export const skills: SkillGroup[] = [
   {
-    name: 'Spoken languages',
-    skills: [
-      {
-        name: 'English',
-        level: 10,
-      },
-      {
-        name: 'French',
-        level: 4,
-      },
-      {
-        name: 'Spanish',
-        level: 3,
-      },
-    ],
-  },
-  {
     name: 'Frontend development',
     skills: [
       {
-        name: 'React',
+        name: 'Java Swing',
         level: 9,
       },
       {
-        name: 'Typescript',
-        level: 7,
+        name: 'React',
+        level: 4,
       },
       {
-        name: 'GraphQL',
-        level: 6,
+        name: 'Typescript',
+        level: 3,
       },
     ],
   },
@@ -160,36 +128,32 @@ export const skills: SkillGroup[] = [
     name: 'Backend development',
     skills: [
       {
-        name: 'Node.js',
-        level: 8,
+        name: 'Python',
+        level: 7,
       },
       {
-        name: 'Rust',
-        level: 5,
-      },
-      {
-        name: 'Golang',
+        name: 'Typescript',
         level: 4,
       },
     ],
   },
-  {
-    name: 'Mobile development',
-    skills: [
-      {
-        name: 'React Native',
-        level: 9,
-      },
-      {
-        name: 'Flutter',
-        level: 4,
-      },
-      {
-        name: 'Swift',
-        level: 3,
-      },
-    ],
-  },
+  // {
+  //   name: 'Mobile development',
+  //   skills: [
+  //     {
+  //       name: 'React Native',
+  //       level: 9,
+  //     },
+  //     {
+  //       name: 'Flutter',
+  //       level: 4,
+  //     },
+  //     {
+  //       name: 'Swift',
+  //       level: 3,
+  //     },
+  //   ],
+  // },
 ];
 
 /**
@@ -197,71 +161,17 @@ export const skills: SkillGroup[] = [
  */
 export const portfolioItems: PortfolioItem[] = [
   {
-    title: 'Project title 1',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'This Website!',
+    description: 'Forked this next project and modified it.',
+    url: 'https://mikeirlbeck.com',
     image: porfolioImage1,
   },
-  {
-    title: 'Project title 2',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage2,
-  },
-  {
-    title: 'Project title 3',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage3,
-  },
-  {
-    title: 'Project title 4',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage4,
-  },
-  {
-    title: 'Project title 5',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage5,
-  },
-  {
-    title: 'Project title 6',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage6,
-  },
-  {
-    title: 'Project title 7',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage7,
-  },
-  {
-    title: 'Project title 8',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage8,
-  },
-  {
-    title: 'Project title 9',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage9,
-  },
-  {
-    title: 'Project title 10',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage10,
-  },
-  {
-    title: 'Project title 11',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage11,
-  },
+  // {
+  //   title: 'Project title 11',
+  //   description: 'Give a short description of your project here.',
+  //   url: 'https://reactresume.com',
+  //   image: porfolioImage11,
+  // },
 ];
 
 /**
@@ -269,42 +179,56 @@ export const portfolioItems: PortfolioItem[] = [
  */
 export const education: TimelineItem[] = [
   {
-    date: 'April 2007',
-    location: 'Clown college',
-    title: 'Masters in Beer tasting',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: 'August 2023 - Present',
+    location: 'Georgia Institute of Technology',
+    title: 'Masters in Computer Science',
+    content: (
+      <div>
+        Courses taken:
+        <ul>
+          <li>- High Performance Computer Architecture</li>
+        </ul>
+      </div>
+    ),
   },
   {
-    date: 'March 2003',
-    location: 'School of Business',
-    title: 'What did you study 101',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: 'August 2018 - May 2022',
+    location: 'Colorado State University',
+    title: 'B.S. Mechanical Engineering',
+    content: (
+      <p>
+        Studied the broadfield of mechanical engineering. My favorite courses included robotics, mechatronics, and
+        machine design.
+      </p>
+    ),
   },
 ];
 
 export const experience: TimelineItem[] = [
   {
-    date: 'March 2010 - Present',
-    location: 'Awesome Development Company',
-    title: 'Senior UX Engineer',
+    date: 'January 2022 - Present',
+    location: 'Vectis Automation LLC.',
+    title: 'Software Engineer',
     content: (
       <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
+        Responsible for full-stack development of a robotic welding application. Developed new features to enable
+        customers to more efficiently teach welds. In addition to normal development work, I've helped in establishing
+        unit testing, release branch version control practices, Innovated UX, The application runs on an{' '}
+        <i>i-pad like</i> device.
       </p>
     ),
   },
-  {
-    date: 'March 2007 - February 2010',
-    location: 'Garage Startup Studio',
-    title: 'Junior bug fixer',
-    content: (
-      <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
-      </p>
-    ),
-  },
+  // {
+  //   date: 'March 2007 - February 2010',
+  //   location: 'Garage Startup Studio',
+  //   title: 'Junior bug fixer',
+  //   content: (
+  //     <p>
+  //       Describe work, special projects, notable achievements, what technologies you have been working with, and
+  //       anything else that would be useful for an employer to know.
+  //     </p>
+  //   ),
+  // },
 ];
 
 /**
@@ -341,23 +265,18 @@ export const contact: ContactSection = {
   items: [
     {
       type: ContactType.Email,
-      text: 'reachout@timbaker.me',
-      href: 'mailto:reachout@timbaker.me',
+      text: 'software.mikeirlbeck@gmail.com',
+      href: 'mailto:software.mikeirlbeck@gmail.com',
     },
     {
       type: ContactType.Location,
-      text: 'Victoria BC, Canada',
-      href: 'https://www.google.ca/maps/place/Victoria,+BC/@48.4262362,-123.376775,14z',
-    },
-    {
-      type: ContactType.Instagram,
-      text: '@tbakerx',
-      href: 'https://www.instagram.com/tbakerx/',
+      text: 'Loveland, CO',
+      href: 'https://maps.app.goo.gl/dDmMRNpeuH4fuBcT9',
     },
     {
       type: ContactType.Github,
-      text: 'tbakerx',
-      href: 'https://github.com/tbakerx',
+      text: 'MikeIrlbeck',
+      href: 'https://github.com/MikeIrlbeck',
     },
   ],
 };
@@ -366,9 +285,9 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/tbakerx'},
-  {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/timbakerx/'},
-  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/reactresume/'},
-  {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
+  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/MikeIrlbeck'},
+  // {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
+  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/mike-irlbeck'},
+  // {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/reactresume/'},
+  // {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
 ];
