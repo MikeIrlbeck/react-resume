@@ -88,7 +88,7 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `My passion resides in building useful apps where I have the opportunity to develop both the front end interface as well as the backend data management and algorithm design. Learning the complete picture of the computer system has also been fascinating.`,
+  description: `My passion resides in building useful apps where I have the opportunity to develop both the front end interface as well as the backend data management and algorithm design. Learning the complete picture of the computer system has been fascinating.`,
   aboutItems: [
     {label: 'Location', text: 'Loveland, CO', Icon: MapIcon},
     {label: 'Interests', text: 'Mountain Biking, Reading, Hiking', Icon: SparklesIcon},
