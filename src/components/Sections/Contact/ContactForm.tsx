@@ -1,8 +1,9 @@
 import {FC, memo, useCallback, useMemo, useState} from 'react';
 
-interface FormData {
+export interface FormData {
   name: string;
   email: string;
+  subject: string;
   message: string;
 }
 
@@ -12,11 +13,16 @@ const ContactForm: FC = memo(() => {
       name: '',
       email: '',
       message: '',
+      subject: '',
     }),
     [],
   );
 
   const [data, setData] = useState<FormData>(defaultData);
+  const [errors, setErrors] = useState({});
+
+  //   Setting button text on form submission
+  const [buttonText, setButtonText] = useState('Send Message');
 
   const onChange = useCallback(
     <T extends HTMLInputElement | HTMLTextAreaElement>(event: React.ChangeEvent<T>): void => {
@@ -29,15 +35,65 @@ const ContactForm: FC = memo(() => {
     [data],
   );
 
+  const handleValidation = useCallback(() => {
+    const tempErrors: {[key: string]: boolean} = {};
+    let isValid = true;
+
+    const fullname = data.name;
+    if (fullname.length <= 0) {
+      tempErrors['fullname'] = true;
+      isValid = false;
+    }
+    const email = data.email;
+    if (email.length <= 0) {
+      tempErrors['email'] = true;
+      isValid = false;
+    }
+    const message = data.message;
+    if (message.length <= 0) {
+      tempErrors['message'] = true;
+      isValid = false;
+    }
+
+    setErrors({...tempErrors});
+    console.log('errors', errors);
+    return isValid;
+  }, [data, errors]);
+
   const handleSendMessage = useCallback(
     async (event: React.FormEvent<HTMLFormElement>) => {
       event.preventDefault();
+      const isValidForm = handleValidation();
+
+      if (isValidForm) {
+        setButtonText('Sending');
+        const res = await fetch('/api/sendgrid', {
+          // const res = await fetch('/src/pages/api/sendgrid', {
+          body: JSON.stringify({
+            email: data.email,
+            name: data.name,
+            message: data.message,
+            subject: 'New Lead',
+          }),
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          method: 'POST',
+        });
+
+        const {error} = await res.json();
+        if (error) {
+          setButtonText('Error');
+          return;
+        }
+        setButtonText('Sent');
+      }
       /**
        * This is a good starting point to wire up your form submission logic
        * */
       console.log('Data to send: ', data);
     },
-    [data],
+    [data, handleValidation],
   );
 
   const inputClasses =
@@ -68,7 +124,7 @@ const ContactForm: FC = memo(() => {
         aria-label="Submit contact form"
         className="w-max rounded-full border-2 border-orange-600 bg-stone-900 px-4 py-2 text-sm font-medium text-white shadow-md outline-none hover:bg-stone-800 focus:ring-2 focus:ring-orange-600 focus:ring-offset-2 focus:ring-offset-stone-800"
         type="submit">
-        Send Message
+        {buttonText}
       </button>
     </form>
   );
