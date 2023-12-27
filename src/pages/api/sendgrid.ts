@@ -42,7 +42,10 @@ async function sendEmail(req: RequestData, res: NextApiResponse) {
     });
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (error: any) {
-    // console.log(error);
+    console.log(error);
+    if (error.response) {
+      console.log(error.response.body);
+    }
     return res.status(error.statusCode || 500).json({error: error.message});
   }
 
