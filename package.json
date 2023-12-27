@@ -3,20 +3,18 @@
   "version": "2.0.0",
   "private": true,
   "scripts": {
-    "build": "yarn compile && yarn next build",
-    "clean": "rm -rf build-tsc .next",
-    "compile": "yarn run -T tsc --build --verbose",
-    "dev": "yarn compile && yarn next dev",
-    "lint": "yarn run -T prettier --write './src/**/*.{js,jsx,json,ts,tsx}' && eslint './src/**/*.{js,jsx,ts,tsx}' --fix --max-warnings=0",
-    "start": "yarn next start",
-    "sitemap": "yarn next-sitemap"
+    "build": "next build",
+    "dev": "next dev",
+    "sitemap": "next-sitemap"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.16",
     "@heroicons/react": "^2.0.18",
+    "@sendgrid/mail": "^8.1.0",
     "autoprefixer": "^10.4.14",
     "classnames": "^2.3.2",
     "next": "^13.4.12",
+    "nodemon": "^3.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "ts-pattern": "^5.0.4"
